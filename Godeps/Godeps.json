@@ -1,0 +1,113 @@
+{
+	"ImportPath": "github.com/partyblanket/chatapp",
+	"GoVersion": "go1.12",
+	"GodepVersion": "v80",
+	"Deps": [
+		{
+			"ImportPath": "github.com/clbanning/x2j",
+			"Comment": "1.1-5-g5e605d4",
+			"Rev": "5e605d46809c441eb0e565867b63f7d80c9140c2"
+		},
+		{
+			"ImportPath": "github.com/gorilla/websocket",
+			"Comment": "v1.4.0-13-gae1634f",
+			"Rev": "ae1634f6a98965ded3b8789c626cb4e0bd78c3de"
+		},
+		{
+			"ImportPath": "github.com/partyblanket/trace",
+			"Rev": "14a5f3f68ec4cf0a896838ba5b0a03e4720ca83c"
+		},
+		{
+			"ImportPath": "github.com/stretchr/codecs",
+			"Rev": "04a5b1e1910de7aaf00e1d4419d2508247fba1b4"
+		},
+		{
+			"ImportPath": "github.com/stretchr/codecs/bson",
+			"Rev": "04a5b1e1910de7aaf00e1d4419d2508247fba1b4"
+		},
+		{
+			"ImportPath": "github.com/stretchr/codecs/constants",
+			"Rev": "04a5b1e1910de7aaf00e1d4419d2508247fba1b4"
+		},
+		{
+			"ImportPath": "github.com/stretchr/codecs/csv",
+			"Rev": "04a5b1e1910de7aaf00e1d4419d2508247fba1b4"
+		},
+		{
+			"ImportPath": "github.com/stretchr/codecs/json",
+			"Rev": "04a5b1e1910de7aaf00e1d4419d2508247fba1b4"
+		},
+		{
+			"ImportPath": "github.com/stretchr/codecs/jsonp",
+			"Rev": "04a5b1e1910de7aaf00e1d4419d2508247fba1b4"
+		},
+		{
+			"ImportPath": "github.com/stretchr/codecs/msgpack",
+			"Rev": "04a5b1e1910de7aaf00e1d4419d2508247fba1b4"
+		},
+		{
+			"ImportPath": "github.com/stretchr/codecs/services",
+			"Rev": "04a5b1e1910de7aaf00e1d4419d2508247fba1b4"
+		},
+		{
+			"ImportPath": "github.com/stretchr/codecs/xml",
+			"Rev": "04a5b1e1910de7aaf00e1d4419d2508247fba1b4"
+		},
+		{
+			"ImportPath": "github.com/stretchr/gomniauth",
+			"Rev": "4b6c822be2eb64551618722ff80cecde4d63d9be"
+		},
+		{
+			"ImportPath": "github.com/stretchr/gomniauth/common",
+			"Rev": "4b6c822be2eb64551618722ff80cecde4d63d9be"
+		},
+		{
+			"ImportPath": "github.com/stretchr/gomniauth/oauth2",
+			"Rev": "4b6c822be2eb64551618722ff80cecde4d63d9be"
+		},
+		{
+			"ImportPath": "github.com/stretchr/gomniauth/providers/facebook",
+			"Rev": "4b6c822be2eb64551618722ff80cecde4d63d9be"
+		},
+		{
+			"ImportPath": "github.com/stretchr/gomniauth/providers/github",
+			"Rev": "4b6c822be2eb64551618722ff80cecde4d63d9be"
+		},
+		{
+			"ImportPath": "github.com/stretchr/gomniauth/providers/google",
+			"Rev": "4b6c822be2eb64551618722ff80cecde4d63d9be"
+		},
+		{
+			"ImportPath": "github.com/stretchr/objx",
+			"Comment": "v0.2.0-3-g35313a9",
+			"Rev": "35313a95ee26395aa17d366c71a2ccf788fa69b6"
+		},
+		{
+			"ImportPath": "github.com/stretchr/signature",
+			"Rev": "168b2a1e1b562bf381d47471e31f5979a2a51cd5"
+		},
+		{
+			"ImportPath": "github.com/stretchr/stew/strings",
+			"Rev": "80ef0842b48b329a6120607c817a85aff5a2ec71"
+		},
+		{
+			"ImportPath": "github.com/stretchr/tracer",
+			"Rev": "66d3696bba973e1697f7d68413b3f19c6d6e2a7c"
+		},
+		{
+			"ImportPath": "github.com/ugorji/go/codec",
+			"Comment": "codec/codecgen/v1.1.7-29-g42bc974",
+			"Rev": "42bc974514ff101a54c6b72a0e4dee29d96c0b26"
+		},
+		{
+			"ImportPath": "gopkg.in/mgo.v2/bson",
+			"Comment": "r2016.08.01-8-ga6b53ec",
+			"Rev": "a6b53ec6cb22a3699387a57a161566f9402ee85b"
+		},
+		{
+			"ImportPath": "gopkg.in/mgo.v2/internal/json",
+			"Comment": "r2016.08.01-8-ga6b53ec",
+			"Rev": "a6b53ec6cb22a3699387a57a161566f9402ee85b"
+		}
+	]
+}
