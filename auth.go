@@ -60,6 +60,7 @@ func loginHandler(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Location", loginUrl)
 		w.WriteHeader(http.StatusTemporaryRedirect)
 	case "callback":
+		fmt.Println("entering callback")
 		provider, err := gomniauth.Provider(provider)
 		if err != nil {
 			http.Error(w, fmt.Sprintf("Error when trying to get provider %s: %s",

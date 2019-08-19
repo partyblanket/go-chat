@@ -1,1 +1,1 @@
-web: chatapp
+web: chatapp -trace
