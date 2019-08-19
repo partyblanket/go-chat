@@ -2,6 +2,7 @@ package main
 
 import (
 	"flag"
+	"fmt"
 	"log"
 	"net/http"
 	"os"
@@ -32,6 +33,11 @@ func (t *templateHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 	var addr = flag.String("addr", ":8080", "The addr of the application.")
+	envPort, exists := os.LookupEnv("PORT")
+	if exists {
+		fmt.Println("envirionment port: ", envPort)
+		*addr = ":" + envPort
+	}
 	var tracerOn = flag.Bool("trace", false, "With tracing.")
 	flag.Parse() // parse the flags
 	r := newRoom()
