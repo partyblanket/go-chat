@@ -45,8 +45,6 @@ func main() {
 		r.tracer = trace.New(os.Stdout)
 	}
 	// setup gomniauth
-	// ID:
-
 	gomniauth.SetSecurityKey("the_mountains_are_really_beautiful_today")
 	gomniauth.WithProviders(
 		facebook.New("key", "secret",
