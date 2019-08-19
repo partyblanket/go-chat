@@ -15,6 +15,7 @@ import (
 	"github.com/stretchr/gomniauth/providers/facebook"
 	"github.com/stretchr/gomniauth/providers/github"
 	"github.com/stretchr/gomniauth/providers/google"
+	"github.com/stretchr/objx"
 )
 
 type templateHandler struct {
@@ -25,10 +26,15 @@ type templateHandler struct {
 
 func (t *templateHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	t.once.Do(func() {
-		t.templ = template.Must(template.ParseFiles(filepath.Join("templates",
-			t.filename)))
+		t.templ = template.Must(template.ParseFiles(filepath.Join("templates", t.filename)))
 	})
-	t.templ.Execute(w, r)
+	data := map[string]interface{}{
+		"Host": r.Host,
+	}
+	if authCookie, err := r.Cookie("auth"); err == nil {
+		data["UserData"] = objx.MustFromBase64(authCookie.Value)
+	}
+	t.templ.Execute(w, data)
 }
 
 func main() {
@@ -39,12 +45,14 @@ func main() {
 		fmt.Println("envirionment port: ", envPort)
 		*addr = ":" + envPort
 	}
+
 	var tracerOn = flag.Bool("trace", false, "With tracing.")
-	flag.Parse() // parse the flags
+
 	r := newRoom()
 	if *tracerOn {
 		r.tracer = trace.New(os.Stdout)
 	}
+	flag.Parse() // parse the flags
 	// setup gomniauth
 	gomniauth.SetSecurityKey("the_mountains_are_really_beautiful_today")
 	gomniauth.WithProviders(
