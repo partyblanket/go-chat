@@ -34,6 +34,7 @@ func (t *templateHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 func main() {
 	var addr = flag.String("addr", ":8080", "The addr of the application.")
 	envPort, exists := os.LookupEnv("PORT")
+
 	if exists {
 		fmt.Println("envirionment port: ", envPort)
 		*addr = ":" + envPort
@@ -48,11 +49,11 @@ func main() {
 	gomniauth.SetSecurityKey("the_mountains_are_really_beautiful_today")
 	gomniauth.WithProviders(
 		facebook.New("key", "secret",
-			"http://me.me.com:8080/auth/callback/facebook"),
+			"https://enigmatic-ravine-50615.herokuapp.com/auth/callback/facebook"),
 		github.New("key", "secret",
-			"http://localhost:8080/auth/callback/github"),
+			"https://enigmatic-ravine-50615.herokuapp.com/auth/callback/github"),
 		google.New("452843566981-q8jut402jb2ncj2k9kvaih2n2ot7fpp8.apps.googleusercontent.com", "Wpug48rV1t6cOJki7-cwvHwl",
-			"http://me.me.com:8080/auth/callback/google"),
+			"https://enigmatic-ravine-50615.herokuapp.com/auth/callback/google"),
 	)
 
 	http.Handle("/", MustAuth(&templateHandler{filename: "chat.html"}))
