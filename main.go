@@ -2,7 +2,6 @@ package main
 
 import (
 	"flag"
-	"fmt"
 	"log"
 	"net/http"
 	"os"
@@ -28,7 +27,6 @@ func (t *templateHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	t.once.Do(func() {
 		t.templ = template.Must(template.ParseFiles(filepath.Join("templates", t.filename)))
 	})
-	fmt.Println("HOST: ", r.Host)
 	data := map[string]interface{}{
 		"Host": r.Host,
 	}
@@ -43,7 +41,6 @@ func main() {
 	envPort, exists := os.LookupEnv("PORT")
 
 	if exists {
-		fmt.Println("envirionment port: ", envPort)
 		*addr = ":" + envPort
 	}
 
